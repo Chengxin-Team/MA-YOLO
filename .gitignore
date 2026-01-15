@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+
+# Data & datasets
+data/
+datasets/
+
+# Training outputs
+runs/
+
+# Model weights
+weights/
+*.pt
+*.pth
+*.onnx
+
+# Logs
+*.log
