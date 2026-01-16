@@ -24,7 +24,7 @@ Note:
 Due to license and size constraints, datasets and trained weights are NOT included in this repository.
 
 3. Repository Structure
-
+```text
 MA-YOLO/
 ├── train.py                 # training script
 ├── test.py                  # evaluation script
@@ -42,7 +42,7 @@ MA-YOLO/
 ├── datasets/                # user-prepared datasets (not included)
 ├── weights/                 # trained weights (not included)
 └── README.md
-
+```
 4. Environment Setup
 
 - Python >= 3.8
@@ -51,7 +51,7 @@ MA-YOLO/
 
 5. Dataset Preparation
 Download the datasets from the official websites and organize them in YOLO format:
-
+```text
 datasets/
 ├── kitti/
 │   ├── images/
@@ -71,7 +71,7 @@ datasets/
         ├── train
         ├── val
         └── test
-
+```
 6. Training
 Example command for training on KITTI:
 
