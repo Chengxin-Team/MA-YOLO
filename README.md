@@ -26,13 +26,21 @@ Due to license and size constraints, datasets and trained weights are NOT includ
 3. Repository Structure
 
 MA-YOLO/
-├── train.py # training script
-├── test.py # evaluation script
-├── detect.py # inference script
-├── models/ # model definitions and YAML configs
-├── utils/ # dataset loading, loss, metrics, utilities
-├── datasets/ # user-prepared datasets (not included)
-├── weights/ # trained weights (not included)
+├── train.py                 # training script
+├── test.py                  # evaluation script
+├── detect.py                # inference script
+├── models/                  # model definitions and YAML configs
+│   ├── common.py
+│   ├── yolo.py
+│   ├── experimental.py
+│   └── *.yaml
+├── utils/                   # dataset loading, loss, metrics, utilities
+│   ├── datasets.py
+│   ├── loss.py
+│   ├── metrics.py
+│   └── torch_utils.py
+├── datasets/                # user-prepared datasets (not included)
+├── weights/                 # trained weights (not included)
 └── README.md
 
 4. Environment Setup
@@ -46,11 +54,23 @@ Download the datasets from the official websites and organize them in YOLO forma
 
 datasets/
 ├── kitti/
-│   ├── images/{train,val,test}
-│   └── labels/{train,val,test}
+│   ├── images/
+│   │   ├── train
+│   │   ├── val
+│   │   └── test
+│   └── labels/
+│       ├── train
+│       ├── val
+│       └── test
 └── nuscenes_01/
-    ├── images/{train,val,test}
-    └── labels/{train,val,test}
+    ├── images/
+    │   ├── train
+    │   ├── val
+    │   └── test
+    └── labels/
+        ├── train
+        ├── val
+        └── test
 
 6. Training
 Example command for training on KITTI:
